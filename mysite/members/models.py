@@ -13,6 +13,10 @@ class Member(models.Model):
     member_status = models.BooleanField(False)
     member_picture = models.FileField(max_length=100)
 
+    def __str__(self):
+        return self.member_first_name + ' ' + self.member_last_name
+
+
 @python_2_unicode_compatible
 class Chapter(models.Model):
 
